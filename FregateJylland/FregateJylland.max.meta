@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 5ff38909da653d04abef33c4e0118333
+timeCreated: 1477697614
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Agterspejl
+    100002: Black
+    100004: Box01
+    100006: Bronce
+    100008: Brownwood
+    100010: daek
+    100012: //RootNode
+    100014: Group01
+    100016: kanoner
+    100018: Lavet
+    100020: Object01
+    100022: pipe02
+    100024: Skrog
+    100026: spliflag
+    100028: Water
+    100030: Whitewood
+    400000: Agterspejl
+    400002: Black
+    400004: Box01
+    400006: Bronce
+    400008: Brownwood
+    400010: daek
+    400012: //RootNode
+    400014: Group01
+    400016: kanoner
+    400018: Lavet
+    400020: Object01
+    400022: pipe02
+    400024: Skrog
+    400026: spliflag
+    400028: Water
+    400030: Whitewood
+    2300000: Agterspejl
+    2300002: Black
+    2300004: Box01
+    2300006: Bronce
+    2300008: Brownwood
+    2300010: daek
+    2300012: kanoner
+    2300014: Lavet
+    2300016: Object01
+    2300018: pipe02
+    2300020: Skrog
+    2300022: spliflag
+    2300024: Water
+    2300026: Whitewood
+    3300000: Agterspejl
+    3300002: Black
+    3300004: Box01
+    3300006: Bronce
+    3300008: Brownwood
+    3300010: daek
+    3300012: kanoner
+    3300014: Lavet
+    3300016: Object01
+    3300018: pipe02
+    3300020: Skrog
+    3300022: spliflag
+    3300024: Water
+    3300026: Whitewood
+    4300000: Water
+    4300002: Lavet
+    4300004: Object01
+    4300006: daek
+    4300008: spliflag
+    4300010: Agterspejl
+    4300012: pipe02
+    4300014: kanoner
+    4300016: Black
+    4300018: Bronce
+    4300020: Skrog
+    4300022: Box01
+    4300024: Brownwood
+    4300026: Whitewood
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
