@@ -25,6 +25,7 @@ public class Level4BackDoor : MonoBehaviour {
         if (trig.gameObject.tag == "Player") {
             if (Input.GetKey(KeyCode.Joystick1Button2)) {
                 guide.text = "No surprise. It's locked...";
+                gameObject.GetComponent<AudioSource>().Play();
             }
         }
     }

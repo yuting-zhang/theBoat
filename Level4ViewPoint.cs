@@ -5,31 +5,38 @@ public class Level4ViewPoint : MonoBehaviour {
     public UnityEngine.UI.Text guide;
     public OVRPlayerController controller;
     public GameObject player;
+    public GameObject airwall;
+    public GameObject cameraRig;
    
 
     private bool leapOfFaith;
     private bool jumped;
+    private float rotatedAngle;
 
     // Use this for initialization
     void Start () {
         leapOfFaith = false;
         jumped = false;
+        rotatedAngle = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        print(player.transform.position.x);
-	    if (leapOfFaith) {
+
+        if (leapOfFaith) {
             if (!jumped) {
-                print("BOOM");
 
                 Vector3 position = player.transform.position;
-                print(position.x);
-                position.x += 1 * Time.deltaTime;
+                position.x += 3 * Time.deltaTime;
+                position.y += 3 * Time.deltaTime;
                 if (position.x >= 12.5)
                     jumped = true;
                 player.transform.position = position;
-                print(position.x);
+                
+            }
+            if (rotatedAngle > -270f) {
+                cameraRig.transform.Rotate(Vector3.forward, -100 * Time.deltaTime, Space.World);
+                rotatedAngle += -100 * Time.deltaTime;               
             }
         }
 	}
@@ -42,9 +49,11 @@ public class Level4ViewPoint : MonoBehaviour {
     void OnTriggerStay(Collider trig) {
         if (trig.gameObject.tag == "Player") {
             if (Input.GetKey(KeyCode.Joystick1Button2)) {
-                controller.GravityModifier = 0.5f;
+                controller.GravityModifier = 0.1f;
                 leapOfFaith = true;
                 guide.text = "";
+                airwall.SetActive(false);
+                gameObject.GetComponent<AudioSource>().Play();
             }
         }
     }

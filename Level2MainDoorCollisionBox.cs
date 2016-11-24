@@ -20,13 +20,19 @@ public class Level2MainDoorCollisionBox : MonoBehaviour {
             guide.text = "Press X to open the door";
         }
     }
+    IEnumerator loadNewScene() {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Level3");
+    }
     void OnTriggerStay(Collider trig) {
         if (trig.gameObject.tag == "Player") {
             if (Input.GetKey(KeyCode.Joystick1Button2)) {
                 if (mainDoor.transform.localScale.z <= 18)
                     guide.text = "It's too small! Can't get through!";
-                else
-                    SceneManager.LoadScene("Level3");
+                else {
+                    gameObject.GetComponent<AudioSource>().Play();
+                    StartCoroutine("loadNewScene");
+                }
 
             }
         }

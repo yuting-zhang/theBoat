@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
-public class Level3MainDoor : MonoBehaviour {
-    public AudioClip openClip;
+using System.Collections;
 
-    // Use this for initialization
-    public bool locked = true;
+public class Level4RealDoor : MonoBehaviour {
     public UnityEngine.UI.Text guide;
-    void Start () {
-	    
-	}
+    // Use this for initialization
+    void Start() {
+
+    }
 
     // Update is called once per frame
     void Update() {
@@ -24,21 +22,14 @@ public class Level3MainDoor : MonoBehaviour {
 
     IEnumerator loadNewScene() {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Level4");
+        SceneManager.LoadScene("MenuScene");
     }
 
     void OnTriggerStay(Collider trig) {
         if (trig.gameObject.tag == "Player") {
             if (Input.GetKey(KeyCode.Joystick1Button2)) {
-                if (locked) {
-                    guide.text = "Well, it is locked again...";
-                    gameObject.GetComponent<AudioSource>().Play();
-                }
-                else {
-                    gameObject.GetComponent<AudioSource>().clip = openClip;
-                    gameObject.GetComponent<AudioSource>().Play();
-                    StartCoroutine("loadNewScene");
-                }
+                gameObject.GetComponent<AudioSource>().Play();
+                StartCoroutine("loadNewScene");
             }
         }
     }

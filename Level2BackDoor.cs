@@ -22,8 +22,10 @@ public class Level2BackDoor : MonoBehaviour {
     }
     void OnTriggerStay(Collider trig) {
         if (trig.gameObject.tag == "Player") {
-            if (Input.GetKey(KeyCode.Joystick1Button2))
+            if (Input.GetKey(KeyCode.Joystick1Button2)) {
                 guide.text = "Locked... Who did it?";
+                gameObject.GetComponent<AudioSource>().Play();
+            }
         }
     }
 
