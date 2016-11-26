@@ -100,7 +100,7 @@ public class OVRPlayerController : MonoBehaviour {
         CameraRig.transform.localPosition = p;
 
         GravityModifier = 0.1f;
-        JumpForce = 0.3f;
+        JumpForce = 0.5f;
     }
 
     void Awake() {
@@ -178,7 +178,7 @@ public class OVRPlayerController : MonoBehaviour {
 
         moveDirection += MoveThrottle * SimulationRate * Time.deltaTime;
 
-        
+
         // Gravity
         if (Controller.isGrounded && FallSpeed <= 0)
             FallSpeed = ((Physics.gravity.y * (GravityModifier * 0.002f)));

@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour {
         CameraRig.transform.localPosition = p;
 
         GravityModifier = 0.1f;
-        JumpForce = 1.0f;
+        JumpForce = 0.5f;
     }
 
     void Awake() {

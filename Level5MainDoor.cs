@@ -22,7 +22,7 @@ public class Level5MainDoor : MonoBehaviour {
 
     IEnumerator loadNewScene() {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Level9");
+        SceneManager.LoadScene("Level6");
     }
 
     void OnTriggerStay(Collider trig) {
