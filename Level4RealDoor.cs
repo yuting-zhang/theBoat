@@ -22,7 +22,7 @@ public class Level4RealDoor : MonoBehaviour {
 
     IEnumerator loadNewScene() {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene("Level5");
     }
 
     void OnTriggerStay(Collider trig) {

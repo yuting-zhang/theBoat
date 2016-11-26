@@ -35,8 +35,8 @@ public class Level4ViewPoint : MonoBehaviour {
                 
             }
             if (rotatedAngle > -270f) {
-                cameraRig.transform.Rotate(Vector3.forward, -100 * Time.deltaTime, Space.World);
-                rotatedAngle += -100 * Time.deltaTime;               
+                cameraRig.transform.Rotate(Vector3.forward, -50 * Time.deltaTime, Space.World);
+                rotatedAngle += -50 * Time.deltaTime;               
             }
         }
 	}
@@ -54,6 +54,7 @@ public class Level4ViewPoint : MonoBehaviour {
                 guide.text = "";
                 airwall.SetActive(false);
                 gameObject.GetComponent<AudioSource>().Play();
+                player.GetComponent<OVRPlayerController>().SetHaltUpdateMovement(true);
             }
         }
     }

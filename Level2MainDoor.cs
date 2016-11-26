@@ -22,7 +22,8 @@ public class Level2MainDoor : MonoBehaviour {
 
         float oldDistance = Vector3.Distance(gameObject.transform.position, oldPlayerPosition);
         float newDistance = Vector3.Distance(gameObject.transform.position, newPlayerPosition);
-
+        print(oldDistance);
+        print(newDistance);
         if (y >= 180 && Vector3.Distance(newPlayerPosition, oldPlayerPosition) > 0.01) {
             float oldScale = gameObject.transform.localScale.z;
             if (newDistance > oldDistance && oldScale < 20)

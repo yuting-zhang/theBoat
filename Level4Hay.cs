@@ -6,7 +6,7 @@ public class Level4Hay : MonoBehaviour {
     private bool gettingOut = false;
     private float rotatedAngle = 0;
     public GameObject cameraRig;
-
+    public OVRPlayerController player;
     // Use this for initialization
     void Start () {
 	
@@ -24,12 +24,17 @@ public class Level4Hay : MonoBehaviour {
 
         if (!gettingOut && trig.gameObject.tag == "Player") {
             guide.text = "Press X to get out of haystack";
+            gameObject.GetComponent<AudioSource>().Play();
         }
     }
     void OnTriggerStay(Collider trig) {
+        if (gameObject.GetComponent<AudioSource>().time >= 1)
+            gameObject.GetComponent<AudioSource>().Stop();
+
         if (trig.gameObject.tag == "Player") {
             if (Input.GetKey(KeyCode.Joystick1Button2)) {
                 gettingOut = true;
+                player.SetHaltUpdateMovement(false);
                 guide.text = "";
             }
         }
