@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Level6Door0 : MonoBehaviour {
-    public OVRScreenFade camera;
+    public ScreenFader camera;
     public UnityEngine.UI.Text guide;
     public GameObject player;
     public GameObject dest;

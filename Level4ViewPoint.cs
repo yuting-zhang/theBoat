@@ -7,7 +7,6 @@ public class Level4ViewPoint : MonoBehaviour {
     public GameObject player;
     public GameObject airwall;
     public GameObject cameraRig;
-   
 
     private bool leapOfFaith;
     private bool jumped;
@@ -22,7 +21,7 @@ public class Level4ViewPoint : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+       
         if (leapOfFaith) {
             if (!jumped) {
 
