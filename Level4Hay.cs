@@ -6,7 +6,7 @@ public class Level4Hay : MonoBehaviour {
     private bool gettingOut = false;
     private float rotatedAngle = 0;
     public GameObject cameraRig;
-    public OVRPlayerController player;
+    public PlayerController player;
     // Use this for initialization
     void Start () {
 	

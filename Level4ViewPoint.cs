@@ -53,7 +53,7 @@ public class Level4ViewPoint : MonoBehaviour {
                 guide.text = "";
                 airwall.SetActive(false);
                 gameObject.GetComponent<AudioSource>().Play();
-                player.GetComponent<OVRPlayerController>().SetHaltUpdateMovement(true);
+                player.GetComponent<PlayerController>().SetHaltUpdateMovement(true);
             }
         }
     }

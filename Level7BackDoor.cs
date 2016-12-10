@@ -5,8 +5,10 @@ public class Level7BackDoor : MonoBehaviour {
 
     public GameObject mainDoor;
     public int counter = 0;
-
     public UnityEngine.UI.Text guide;
+
+    private float deltaTime = 0f;
+
     // Use this for initialization
     void Start () {
 	
@@ -28,8 +30,14 @@ public class Level7BackDoor : MonoBehaviour {
    
 
     void OnTriggerStay(Collider trig) {
+        deltaTime += Time.deltaTime;
         if (trig.gameObject.tag == "Player") {
-            if (Input.GetKeyDown(KeyCode.Joystick1Button2)) {
+            if (Input.GetKey(KeyCode.Joystick1Button2)) {
+               
+                if (deltaTime < 0.5f)
+                    return;
+
+                deltaTime = 0f;
                 gameObject.GetComponent<AudioSource>().Play();
                 counter++;
                 if (counter > 3) {

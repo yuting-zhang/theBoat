@@ -21,6 +21,7 @@ limitations under the License.
 
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls the player's movement in virtual reality.
@@ -85,6 +86,13 @@ public class PlayerController : OVRPlayerController {
     }
 
     protected virtual void Update() {
+        if (Input.GetKey(KeyCode.Joystick1Button3)) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        if (Input.GetKey(KeyCode.Joystick1Button7))
+            SceneManager.LoadScene("MenuScene");
+
         if (useProfileData) {
             if (InitialPose == null) {
                 // Save the initial pose so it can be recovered if useProfileData

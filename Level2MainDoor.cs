@@ -22,14 +22,17 @@ public class Level2MainDoor : MonoBehaviour {
 
         float oldDistance = Vector3.Distance(gameObject.transform.position, oldPlayerPosition);
         float newDistance = Vector3.Distance(gameObject.transform.position, newPlayerPosition);
-        print(oldDistance);
-        print(newDistance);
-        if (y >= 180 && Vector3.Distance(newPlayerPosition, oldPlayerPosition) > 0.01) {
-            float oldScale = gameObject.transform.localScale.z;
-            if (newDistance > oldDistance && oldScale < 20)
-                gameObject.transform.localScale = new Vector3(oldScale + 0.01f, oldScale + 0.02f, oldScale + 0.02f);
-            else if (newDistance < oldDistance && oldScale > 1)
-                gameObject.transform.localScale = new Vector3(oldScale - 0.01f, oldScale - 0.02f, oldScale - 0.02f);
+
+        if ((y <= 270 + 45 && y >= 270 - 45) && Vector3.Distance(newPlayerPosition, oldPlayerPosition) > 0.001) {
+            float goalScale = newDistance / initialRatio;
+            float scale = gameObject.transform.localScale.z;
+
+            if (scale < goalScale)
+                scale += 0.1f;
+            else
+                scale -= 0.1f;
+            gameObject.transform.localScale = new Vector3(scale, scale, scale);
+       
         }
         oldPlayerPosition = newPlayerPosition;
     }

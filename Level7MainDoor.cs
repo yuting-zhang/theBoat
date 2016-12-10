@@ -8,7 +8,7 @@ public class Level7MainDoor : MonoBehaviour {
     public GameObject backDoor;
     public AudioClip openClip;
     public int counter = 0;
-
+    private float deltaTime = 0f;
     // Use this for initialization
     void Start () {
 	
@@ -21,7 +21,7 @@ public class Level7MainDoor : MonoBehaviour {
 
     IEnumerator loadNewScene() {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Level9");
+        SceneManager.LoadScene("Level8");
     }
 
     
@@ -34,8 +34,14 @@ public class Level7MainDoor : MonoBehaviour {
 
 
     void OnTriggerStay(Collider trig) {
+        deltaTime += Time.deltaTime;
         if (trig.gameObject.tag == "Player") {
-            if (Input.GetKeyDown(KeyCode.Joystick1Button2)) {
+            if (Input.GetKey(KeyCode.Joystick1Button2)) {
+                
+                if (deltaTime < 0.5f)
+                    return;
+
+                deltaTime = 0f;
                 counter++;
 
                 if (backDoor.GetComponent<Level7BackDoor>().counter == 3 && counter == 2) {

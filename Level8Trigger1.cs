@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Level8Trigger1 : MonoBehaviour {
-
+    public AudioSource audio;
     public PlayerController player;
     private bool entered = false;
 	// Use this for initialization
@@ -20,11 +20,12 @@ public class Level8Trigger1 : MonoBehaviour {
             foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Level1")) {
                 obj.AddComponent<Rigidbody>();
             }
-            Physics.gravity = -Physics.gravity * 0.03f;
+            Physics.gravity = new Vector3(0, 9.8f * 0.03f, 0);
             player.GravityModifier = 0.1f;
             entered = true;
             player.JumpForce = 0.01f;
             player.Jump();
+            audio.Play();
         }
     }
 }

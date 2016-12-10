@@ -17,7 +17,6 @@ public class Level4FallVibrate : MonoBehaviour {
     void OnTriggerStay(Collider trig) {
         if (trig.gameObject.tag == "Player") {
             Vector3 position = player.transform.position;
-            print(position);
             position.x += Random.Range(-0.1f, 0.1f);
             position.z += Random.Range(-0.1f, 0.1f);
             if (position.x > 13 || position.x < 12)
