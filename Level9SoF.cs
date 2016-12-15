@@ -46,10 +46,11 @@ public class Level9SoF : MonoBehaviour {
         if (totalTime > 30.0f) {
             endingCanvas.SetActive(true);
             portal.SetActive(true);
-            as1.Stop();
-            as2.Stop();
-            as3.Stop();
-            as4.Stop();
+            as1.volume -= 0.01f;
+            as2.volume -= 0.01f;
+            as3.volume -= 0.01f;
+            as4.volume -= 0.01f;
+     
             return;
         }
 

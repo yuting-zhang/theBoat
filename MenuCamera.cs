@@ -36,6 +36,7 @@ public class MenuCamera : MonoBehaviour {
     // Use this for initialization
     void Start () {
         oldColor = startLabel.color;
+        Physics.gravity = new Vector3(0, -9.8f, 0);
     }
 	
 	// Update is called once per frame

@@ -7,8 +7,8 @@ public class Level8Trigger1 : MonoBehaviour {
     private bool entered = false;
 	// Use this for initialization
 	void Start () {
-	
-	}
+        Physics.gravity = new Vector3(0, -9.8f, 0);
+    }
 	
 	// Update is called once per frame
 	void Update () {
