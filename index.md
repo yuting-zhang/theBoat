@@ -1,14 +1,27 @@
-### Welcome to GitHub Pages.
-This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here [using GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/), select a template crafted by a designer, and publish. After your page is generated, you can check out the new `gh-pages` branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.
+###Introduction
+The Boat is a virtual reality puzzle solving game developed by Yuting Zhang and Jingyi Qu as the
+final project for CS498SL Virtual Reality at University of Illinois at Urbana-Champaign. 
+The goal for this project is to provide a playable VR game demo which explores how VR can change 
+the field of video games, especially how the human visual and vestibular systems would respond
+to this new technology.
 
-### Designer Templates
-We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.
+###Game Background
+_You are on an abandoned ship. Solve puzzles and find your way through this old yet mysterious 
+warship._
 
-### Creating pages manually
-If you prefer to not use the automatic generator, push a branch named `gh-pages` to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.
+There are around 10 levels in this game. In some of them, you need to solve puzzles in order to
+proceed, and in some of them, you simply need to walk forward and enjoy the unique experience 
+virtual reality provides.
 
-### Authors and Contributors
-You can @mention a GitHub username to generate a link to their profile. The resulting `<a>` element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (@defunkt), PJ Hyett (@pjhyett), and Tom Preston-Werner (@mojombo) founded GitHub.
+###Game Trailer
+[The Boat Game Trailer](https://www.youtube.com/watch?v=S-Fdo_UYzQQ)
 
-### Support or Contact
-Having trouble with Pages? Check out our [documentation](https://help.github.com/pages) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+###Game Download
+** This Game Only Supports Oculus Rift With Xbox One Controller **
+
+[The Boat Game Download](https://www.dropbox.com/s/tvpsswbwy3u9qhv/THE%20BOAT.zip?dl=0)
+
+###License
+Copyright [2016] [Yuting Zhang, Jingyi Qu]
+
+This game demo can be used for educational purpose only.
